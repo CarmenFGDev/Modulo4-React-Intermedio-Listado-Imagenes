@@ -1,0 +1,23 @@
+body{
+  background-color:#f7f7f7;
+}
+.header {
+  padding: 3em;
+  display: grid; 
+  grid-template-columns: 40px 60px 60px auto;
+}
+.container {
+  padding: 3em;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+}
+.lists{
+  width:66%;
+}
+.cart{
+  width:33%;
+}
+
+
