@@ -2,5 +2,6 @@ export interface PictureInfoApi {
  id: string;
  picUrl: string;
  title: string;
-  selected: boolean;
+ selected: boolean;
+ age?: string;
 }

@@ -1,19 +1,24 @@
 import React from "react";
 import { ListComponent } from "./list.component";
-import { PictureInfo } from "./list.vm";
 import { getAllPets } from "./list.repository";
+import { useCartDispatch } from "../../core/Providers/cartProvider";
+import { actionsIds } from "../../core/Reducers/cartReducer";
 
 interface Props {
-  animal: string;
+  selectedPet: string;
 }
-
 export const ListContainer: React.FC<Props> = (props) => {
-  const {animal} = props;
-  const [pets, setPets] = React.useState<PictureInfo[]>([]);
-  React.useEffect(() => {
-   const petsCollection = getAllPets(animal);
-   setPets(petsCollection);
-  }, [animal]);
+  const { selectedPet } = props;
+  const dispatch = useCartDispatch();
 
-  return <ListComponent pets={pets} animal={animal}/>;
+  React.useEffect(() => {
+    const petsCollection = getAllPets(selectedPet);
+    if (selectedPet === "cats") {
+      dispatch({ type: actionsIds.SET_CATS, payload: petsCollection });
+    } else {
+      dispatch({ type: actionsIds.SET_DOGS, payload: petsCollection });
+    }
+  }, [selectedPet]);
+
+  return <ListComponent selectedPet={selectedPet} />;
 };

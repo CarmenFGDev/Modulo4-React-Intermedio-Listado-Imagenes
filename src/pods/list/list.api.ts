@@ -1,68 +1,81 @@
 import { PictureInfoApi } from "./list.api-model";
-  const listCats: PictureInfoApi[] = [
+ const host ='http://localhost:8080'; 
+ const listCats: PictureInfoApi[] = [
     { id: 'gato2',
-      picUrl: "gato2.jpg",
+      picUrl: `${host}/cats/gato2.jpg`,
       title: 'Axel',
-      selected: true
+      selected: true,
+      age:'4 months'
     },
     { id: 'gato3',
-      picUrl: "gato3.jpg",
+      picUrl: `${host}/cats/gato3.jpg`,
       title: 'Bruno',
-      selected: false
+      selected: false,
+       age:'5 months'
     },
     { id: 'gato4',
-      picUrl: "gato4.jpg",
+      picUrl: `${host}/cats/gato4.jpg`,
       title: 'Lana',
-      selected: false
+      selected: true,
+      age:'6 months'
     },
     { id: 'gato5',
-       picUrl: "gato5.jpg",
+      picUrl: `${host}/cats/gato5.jpg`,
       title: 'Michi',
-      selected: false
+      selected: false,
+      age:'4 months'
     },
     { id: 'gato6',
-      picUrl: "gato6.jpg",
+      picUrl: `${host}/cats/gato6.jpg`,
       title: 'Asha',
-      selected: false
+      selected: true,
+      age:'7 months'
     },
     { id: 'gato7',
-       picUrl: "gato7.jpg",
+       picUrl: `${host}/cats/gato7.jpg`,
       title: 'Rex',
-      selected: false
+      selected: false,
+       age:'4 months'
     }
 
    ]
   
    const listDogs: PictureInfoApi[] = [
     { id: 'perro2',
-      picUrl: "perro2.jpg",
-      title: 'perro2',
-      selected: true
+      picUrl: `${host}/dogs/perro2.jpg`,
+      title: 'Laika',
+      selected: true,
+      age: '8 months'
     },
     { id: 'perro3',
-      picUrl: "perro3.jpg",
-      title: 'perro3',
-      selected: false
+      picUrl: `${host}/dogs/perro3.jpg`,
+      title: 'Tom',
+      selected: false,
+      age: '8 months'
     },
     { id: 'perro4',
-      picUrl: "perro4.jpg",
-      title: 'perro4',
-      selected: false
+      picUrl: `${host}/dogs/perro4.jpg`,
+      title: 'Luna',
+      selected: true,
+      age: '5 months'
     },
     { id: 'perro5',
-       picUrl: "perro5.jpg",
-      title: 'perro5',
-      selected: false
+       picUrl: `${host}/dogs/perro5.jpg`,
+      title: 'Nala',
+      selected: false,
+       age: '6 months'
     },
     { id: 'perro6',
-      picUrl: "perro6.jpg",
-      title: 'perro6',
-      selected: false
+      picUrl: `${host}/dogs/perro6.jpg`,
+      title: 'Sandy',
+      selected: false,
+       age: '7 months'
     },
     { id: 'perro7',
-       picUrl: "perro7.jpg",
-      title: 'perro7',
-      selected: false
+       picUrl: `${host}/dogs/perro7.jpg`,
+      title: 'Brisa',
+      selected: true,
+       age: '8 months'
     }
    ]
 

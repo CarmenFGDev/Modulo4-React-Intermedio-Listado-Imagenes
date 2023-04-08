@@ -1,11 +1,13 @@
 body{
   background-color:#f7f7f7;
 }
+
 .header {
-  padding: 3em;
+  padding: 2em 2em 0em 2em;
   display: grid; 
   grid-template-columns: 40px 60px 60px auto;
 }
+
 .container {
   padding: 3em;
   display:flex;
@@ -13,11 +15,31 @@ body{
   justify-content: space-between;
  
 }
+
 .lists{
-  width:66%;
+  width:80%;
 }
+
 .cart{
-  width:33%;
+  width:15%;
+  padding:2em;
+}
+
+.MuiListSubheader-root.MuiListSubheader-gutters.MuiListSubheader-sticky.css-1b61ncx-MuiListSubheader-root {
+    margin-bottom: 2em !important;
+}
+
+.css-dasnyc-MuiImageListItemBar-title {
+    color: #6faff0;
+    font-size: 1.2rem!important ;
+}
+
+.css-9p8t4u-MuiChip-root .MuiChip-avatar {
+    margin-left: 13px;
+}
+
+.opacityImg{
+ opacity: 0.5;
 }
 
 

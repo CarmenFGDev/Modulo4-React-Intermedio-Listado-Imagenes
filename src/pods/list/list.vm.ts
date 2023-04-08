@@ -3,4 +3,5 @@ export interface PictureInfo {
  picUrl: string;
  title: string;
  selected: boolean;
+ age?: string;
 }

@@ -7,7 +7,8 @@ export const mapPictureInfoFromApiToVm = (
   id: pet.id,
   picUrl: pet.picUrl,
   title: pet.title,
-  selected: pet.selected
+  selected: pet.selected,
+  age: pet.age,
 });
 
 export const mapPicturesInfoFromApiToVm = (
