@@ -1,10 +1,12 @@
 import React from "react";
 import { CartComponent } from "./cart.component";
-import { useCart } from "../../core/Providers/cartProvider";
+import { PictureInfo } from "../list/list.vm";
 
-export const CartContainer: React.FC = () => {
-  const cats = useCart()["cats"];
-  const pets = cats.concat(useCart()["dogs"]);
-  const petsSelectedCart = pets.filter((pet) => pet.selected);
-  return <CartComponent cartList={petsSelectedCart} />;
+export interface Props {
+ pet: PictureInfo;
+}
+
+export const CartContainer:  React.FC<Props> = (props) => {
+    const {pet} = props;
+   return <CartComponent  pet={pet}/>;
 };

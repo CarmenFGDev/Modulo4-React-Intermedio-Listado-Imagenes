@@ -1,4 +1,4 @@
-import { PictureInfoApi } from "./list.api-model";
+import { PetsApi, PictureInfoApi } from "./list.api-model";
  const host ='http://localhost:8080'; 
  const listCats: PictureInfoApi[] = [
     { id: 'gato2',
@@ -79,17 +79,12 @@ import { PictureInfoApi } from "./list.api-model";
     }
    ]
 
-  export interface IPets{
-    cats: PictureInfoApi[];
-    dogs: PictureInfoApi[];
-  }   
-
-  export const pets: IPets ={
+   export const pets: PetsApi ={
     cats: listCats,
     dogs: listDogs
   }   
 
-  export const getAllPets = (animal: string) : PictureInfoApi[] =>
+  export const getAllPets = () : PetsApi =>
     {
-      return pets[animal];
+      return pets;
     }

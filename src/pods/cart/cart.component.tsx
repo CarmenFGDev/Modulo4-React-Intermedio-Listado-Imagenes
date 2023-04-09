@@ -1,51 +1,31 @@
-import Chip from "@mui/material/Chip/Chip";
-import Divider from "@mui/material/Divider";
-import React from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import {
-  Avatar,
-  ListItemAvatar,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import { PictureInfo } from "../list/list.vm";
-import { useCartDispatch } from "../../core/Providers/cartProvider";
-import { actionsIds } from "../../core/Reducers/cartReducer";
+import React from 'react';
+import { PictureInfo } from '../list/list.vm';
+import ListItem from '@mui/material/ListItem/ListItem';
+import ListItemAvatar from '@mui/material/ListItemAvatar/ListItemAvatar';
+import { Avatar, ListItemText, Typography, Divider } from '@mui/material';
+import { actionsIds } from '../../core/Reducers/cartReducer';
+import { useCartDispatch } from '../../core/Providers/cartProvider';
+
 export interface Props {
-  cartList: PictureInfo[];
+ pet: PictureInfo;
 }
+
 export const CartComponent: React.FC<Props> = (props) => {
-  const { cartList } = props;
-  const handleOnClick = (id: string) => {
+    const {pet} = props;
+    const handleOnClick = (id: string) => {
     dispatch({ type: actionsIds.CHANGE_SELECTED, payload: id });
   };
 
   const dispatch = useCartDispatch();
-  return (
-    <>
-      <Divider
-        textAlign="right"
-        sx={{ marginBottom: "4rem", marginTop: "1rem" }}
-      >
-        <Chip
-          label="Go to home"
-          sx={{
-            backgroundColor: "#1976D2!important",
-            fontSize: "1.5rem",
-            color: "white",
-          }}
-        />
-      </Divider>
-      <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
-        {cartList.map((item) => (
-          <>
+    return(
+         <>
             <ListItem
               alignItems="flex-start"
-              onClick={() => handleOnClick(item.id)}
+              onClick={() => handleOnClick(pet.id)}
+              className='pointer-mouse'
             >
               <ListItemAvatar>
-                <Avatar alt={item.title} src={item.picUrl} />
+                <Avatar alt={pet.title} src={pet.picUrl} />
               </ListItemAvatar>
               <ListItemText
                 primary={
@@ -56,17 +36,14 @@ export const CartComponent: React.FC<Props> = (props) => {
                       variant="body2"
                       color="text.primary"
                     >
-                      {item.title}
+                      {pet.title}
                     </Typography>
                   </React.Fragment>
                 }
-                secondary={item.age}
+                secondary={pet.age}
               />
             </ListItem>
             <Divider variant="inset" component="li" />
           </>
-        ))}
-      </List>
-    </>
-  );
-};
+    )
+}    

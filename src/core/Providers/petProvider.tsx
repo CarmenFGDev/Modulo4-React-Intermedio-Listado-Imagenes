@@ -1,8 +1,9 @@
 import React from "react";
+import { PET } from "../../common/pet.model";
 
 interface PetProviderModel {
-  pet: string;
-  setPet: (name: string) => void;
+  pet: PET;
+  setPet: (name: PET) => void;
 }
 
 interface Props {
@@ -10,11 +11,11 @@ interface Props {
 }
 
 export const PetContext = React.createContext<PetProviderModel>({
-  pet: "cats",
+  pet: PET.CATS,
   setPet: () => {},
 });
 export const PetProvider: React.FC<Props> = ({ children }) => {
-  const [pet, setPet] = React.useState("cats");
+  const [pet, setPet] = React.useState(PET.CATS);
 
   return (
     <PetContext.Provider value={{ pet, setPet }}>

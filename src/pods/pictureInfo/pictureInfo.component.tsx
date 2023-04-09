@@ -25,7 +25,7 @@ export const PictureInfoComponent: React.FC<Props> = (props) => {
         loading="lazy"
         id={item.id}
         onClick={handleOnClick}
-        className={`${item.selected ? "opacityImg" : ""} `}
+        className={`${item.selected ? "opacity-img" : ""} `}
       />
       <ImageListItemBar
         title={item.title}

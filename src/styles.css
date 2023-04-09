@@ -38,8 +38,12 @@ body{
     margin-left: 13px;
 }
 
-.opacityImg{
+.opacity-img{
  opacity: 0.5;
+}
+
+.pointer-mouse{
+  cursor: pointer;
 }
 
 

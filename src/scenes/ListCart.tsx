@@ -1,5 +1,5 @@
 import React from "react";
-import { CartContainer } from "../pods/cart/cart.container";
+import { ListCartContainer } from "../pods/listCart/listCart.container";
 export const ListCart = () => {
-  return <CartContainer />;
+  return <ListCartContainer />;
 };

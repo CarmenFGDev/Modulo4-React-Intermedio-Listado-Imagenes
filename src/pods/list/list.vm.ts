@@ -5,3 +5,8 @@ export interface PictureInfo {
  selected: boolean;
  age?: string;
 }
+export interface Pets {
+    cats: PictureInfo[];
+    dogs: PictureInfo[];
+}
+
