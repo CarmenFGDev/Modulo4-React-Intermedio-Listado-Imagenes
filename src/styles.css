@@ -46,4 +46,10 @@ body{
   cursor: pointer;
 }
 
+.cart-clean{
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
 

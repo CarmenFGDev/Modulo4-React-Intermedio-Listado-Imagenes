@@ -4,7 +4,7 @@ import ImageListItem from "@mui/material/ImageListItem";
 import ListSubheader from "@mui/material/ListSubheader";
 import { PictureInfoContainer } from "../pictureInfo/pictureInfo.container";
 import { useCart } from "../../core/Providers/cartProvider";
-import { PET } from "../../common/pet.model";
+import { PET } from "../../common/model/pet.model";
 import { DividerContainer } from "../../common/components/divider/divider.container";
 
 interface Props {

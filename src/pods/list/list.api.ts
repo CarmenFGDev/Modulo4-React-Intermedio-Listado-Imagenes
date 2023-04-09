@@ -4,7 +4,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'gato2',
       picUrl: `${host}/cats/gato2.jpg`,
       title: 'Axel',
-      selected: true,
+      selected: false,
       age:'4 months'
     },
     { id: 'gato3',
@@ -16,7 +16,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'gato4',
       picUrl: `${host}/cats/gato4.jpg`,
       title: 'Lana',
-      selected: true,
+      selected: false,
       age:'6 months'
     },
     { id: 'gato5',
@@ -28,7 +28,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'gato6',
       picUrl: `${host}/cats/gato6.jpg`,
       title: 'Asha',
-      selected: true,
+      selected: false,
       age:'7 months'
     },
     { id: 'gato7',
@@ -44,7 +44,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'perro2',
       picUrl: `${host}/dogs/perro2.jpg`,
       title: 'Laika',
-      selected: true,
+      selected: false,
       age: '8 months'
     },
     { id: 'perro3',
@@ -56,7 +56,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'perro4',
       picUrl: `${host}/dogs/perro4.jpg`,
       title: 'Luna',
-      selected: true,
+      selected: false,
       age: '5 months'
     },
     { id: 'perro5',
@@ -74,7 +74,7 @@ import { PetsApi, PictureInfoApi } from "./list.api-model";
     { id: 'perro7',
        picUrl: `${host}/dogs/perro7.jpg`,
       title: 'Brisa',
-      selected: true,
+      selected: false,
        age: '8 months'
     }
    ]

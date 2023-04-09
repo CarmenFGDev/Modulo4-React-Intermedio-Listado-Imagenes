@@ -3,7 +3,7 @@ import { ListComponent } from "./list.component";
 import { getAllPets } from "./list.repository";
 import { useCartDispatch } from "../../core/Providers/cartProvider";
 import { actionsIds } from "../../core/Reducers/cartReducer";
-import { PET } from "../../common/pet.model";
+import { PET } from "../../common/model/pet.model";
 
 interface Props {
   selectedPet: PET;

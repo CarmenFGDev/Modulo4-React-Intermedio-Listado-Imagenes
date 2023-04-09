@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ListCats } from "./scenes/ListCats";
 import { LisDogs } from "./scenes/ListDogs";
 import Paper from "@mui/material/Paper";
-import { PetProvider } from "./core/Providers/petProvider";
 import { CartProvider } from "./core/Providers/cartProvider";
 import { ListCart } from "./scenes/ListCart";
 

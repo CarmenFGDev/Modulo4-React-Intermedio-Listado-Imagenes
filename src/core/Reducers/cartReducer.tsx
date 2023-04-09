@@ -15,6 +15,24 @@ export const actionsIds = {
   SET_CATS: "SET_CATS",
   SET_DOGS: "SET_DOGS",
   CHANGE_SELECTED: "CHANGE_SELECTED",
+  CHANGE_INITIAL_VALUES: "CHANGE_INITIAL_VALUES",
+};
+
+const changeSelected = (
+  state: PetsState,
+  field: string,
+  id: string
+): PetsState => {
+  return state[field].map((p) => {
+   return (p.id === id) ? { ...p, selected: !p.selected }: p;
+    }
+  );
+};
+
+const setInitialState = (state: PetsState, field: string): PetsState => {
+  return state[field].map((p) => {
+    return { ...p, selected: false };
+  });
 };
 
 export const CartReducer = (state: PetsState, action: Action) => {
@@ -25,21 +43,15 @@ export const CartReducer = (state: PetsState, action: Action) => {
       return { ...state, dogs: action.payload };
     case actionsIds.CHANGE_SELECTED:
       return {
-        cats: state.cats.map((p) => {
-          if (p.id === action.payload) {
-            return { ...p, selected: !p.selected };
-          } else {
-            return p;
-          }
-        }),
-        dogs: state.dogs.map((p) => {
-          if (p.id === action.payload) {
-            return { ...p, selected: !p.selected };
-          } else {
-            return p;
-          }
-        }),
+        cats: changeSelected(state, "cats", action.payload),
+        dogs: changeSelected(state, "dogs", action.payload),
       };
+    case actionsIds.CHANGE_INITIAL_VALUES:
+      return {
+        cats: setInitialState(state, "cats"),
+        dogs: setInitialState(state, "dogs"),
+      };
+
     default:
       return state;
   }
