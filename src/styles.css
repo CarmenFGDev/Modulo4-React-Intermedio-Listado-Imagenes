@@ -1,55 +1,67 @@
-body{
-  background-color:#f7f7f7;
+body {
+  background-color: #f7f7f7;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2em;
+  padding-right: 3em;
+  align-items: end;
 }
 
 .header {
   padding: 2em 2em 0em 2em;
-  display: grid; 
+  display: grid;
   grid-template-columns: 40px 60px 60px auto;
 }
 
 .container {
   padding: 3em;
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
- 
 }
 
-.lists{
-  width:80%;
+.lists {
+  width: 80%;
 }
 
-.cart{
-  width:15%;
-  padding:2em;
+.list-100 {
+  width: 100%;
+}
+
+.cart {
+  width: 15%;
+  padding: 2em;
 }
 
 .MuiListSubheader-root.MuiListSubheader-gutters.MuiListSubheader-sticky.css-1b61ncx-MuiListSubheader-root {
-    margin-bottom: 2em !important;
+  margin-bottom: 2em !important;
 }
 
 .css-dasnyc-MuiImageListItemBar-title {
-    color: #6faff0;
-    font-size: 1.2rem!important ;
+  color: #6faff0;
+  font-size: 1.2rem !important ;
 }
 
 .css-9p8t4u-MuiChip-root .MuiChip-avatar {
-    margin-left: 13px;
+  margin-left: 13px;
 }
 
-.opacity-img{
- opacity: 0.5;
+.opacity-img {
+  opacity: 0.5;
 }
 
-.pointer-mouse{
+.pointer-mouse {
   cursor: pointer;
 }
 
-.cart-clean{
+.cart-clean {
   margin-top: 2em;
   display: flex;
   justify-content: center;
 }
 
-
+.css-ahj2mt-MuiTypography-root {
+  color: darkgrey;
+}
